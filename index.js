@@ -10,6 +10,8 @@ var app = express();
 //api
 var api = require('./src/api');
 
+var morgan = require('morgan');
+app.use(morgan('short'));
 // 响应HTTP
 app.use('/', api);
 
