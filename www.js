@@ -2,7 +2,7 @@
 var express = require('express');
  
 //引入配置
-var config = require('./config.js').start;
+var config = require('./config.js').dev;
 
 // 创建 express 实例
 var app = express();

@@ -2,7 +2,7 @@
 var express = require('express');
  
 //引入配置
-var config = require('./config.js').dev;
+var config = require('./config.js').start;
 
 // 创建 express 实例
 var app = express();
@@ -15,7 +15,7 @@ app.use(morgan('short'));
 // 响应HTTP
 app.use('/', api);
 
-// 监听到8000端口
+// 监听到8080端口
 app.listen(config.listen, function () {
 	console.log('myWebExpress is listening at port ' + config.listen);
 	console.log('http://localhost:'+ config.listen +'/');
